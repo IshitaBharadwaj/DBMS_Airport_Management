@@ -12,7 +12,7 @@ const app = express();
  * Middleware
  */
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+// app.use(express.urlencoded({extended:false}));
 
 /**
  * Routes
@@ -22,9 +22,11 @@ app.use(express.urlencoded({extended:false}));
     response.status(200).send("This is not why you're here. Head to /user/:id and replace :id with your user id")
 })
 
-const userRouter = require('./routes/airport');
-app.use('/airport',userRouter);
+const airportRouter = require('./routes/airport');
+app.use('/airport',airportRouter);
 
+const airlineRouter = require('./routes/airline');
+app.use('/airline',airlineRouter);
 
 app.listen(PORT, () => {
     console.log(`Listening for requests on port ${PORT}`)

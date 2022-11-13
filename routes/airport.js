@@ -8,8 +8,10 @@ router.get('/',async function(req,res){
         const sqlQuery = 'SELECT airport_name, city, state FROM airport';
         const rows = await pool.query(sqlQuery);
         res.status(200).json(rows);
+        return;
     } catch (error) {
-        res.status(400).send(error.message)
+        res.status(400).send(error.message);
+        return;
     }
 
 
@@ -76,11 +78,14 @@ router.post('/delete', async function(req,res) {
         const result = await pool.query(sqlQuery, airportname);
 
         res.status(200).json(result);
+        return;
         
     } catch (error) {
-        res.status(400).send(error.message)
+        res.status(400).send(error.message);
+        return;
     }
 })
+module.exports = router;
     
 // router.get('/', async function(req,res){
 //     try {
@@ -128,4 +133,3 @@ router.post('/delete', async function(req,res) {
 //     }
 // })
 
-module.exports = router;
