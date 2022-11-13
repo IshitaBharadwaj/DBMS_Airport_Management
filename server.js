@@ -6,6 +6,7 @@ dotenv.config({path: '.env-local'});
 const PORT = process.env.PORT || '3001';
 
 const app = express();
+const cors = require('cors');
 
 
 /**
@@ -13,7 +14,7 @@ const app = express();
  */
 app.use(express.json());
 // app.use(express.urlencoded({extended:false}));
-
+app.use(cors());
 /**
  * Routes
  */
