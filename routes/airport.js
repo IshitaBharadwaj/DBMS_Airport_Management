@@ -34,6 +34,7 @@ router.post('/insert_airport', async function(req,res) {
 router.post('/update', async function(req,res) {
     try {
         const {choice,oldairportname,update_value} = req.body;
+        console.log(typeof choice);
         switch(choice){
             case 1:
                 airport_name=update_value;
@@ -43,6 +44,7 @@ router.post('/update', async function(req,res) {
                 if(rows1){
                     res.status(200).send(`Updated Airport name.`)
                 }
+                return;
                 break;
             case 2:
                 city=update_value;
@@ -52,6 +54,7 @@ router.post('/update', async function(req,res) {
                 if(rows2){
                     res.status(200).send(`Updated city.`)
                 }
+                return;
                 break;
             case 3:
                 state=update_value;
@@ -61,21 +64,24 @@ router.post('/update', async function(req,res) {
                 if(rows3){
                     res.status(200).send(`Updated state.`)
                 }
+                return;
                 break;
         }
 
         res.status(200).send(`airport not found.`);
+        return;
         
     } catch (error) {
-        res.status(400).send(error.message)
+        res.status(400).send(error.message);
+        return;
     }
 })
     
 router.post('/delete', async function(req,res) {
     try {
-        const {airportname} = req.body;
+        const {airport_name} = req.body;
         const sqlQuery = 'DELETE from airport where airport_name = ?';
-        const result = await pool.query(sqlQuery, airportname);
+        const result = await pool.query(sqlQuery, airport_name);
 
         res.status(200).json(result);
         return;

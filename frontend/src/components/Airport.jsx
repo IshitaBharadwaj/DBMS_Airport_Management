@@ -11,7 +11,7 @@ import axios from 'axios';
 // import {useSelector} from 'react-redux'
 
 export default function Airport() {
-//   const {user} = useSelector((state)=>state.auth)
+    //   const {user} = useSelector((state)=>state.auth)
     const [airporttable, setairporttable] = useState([]);
     useEffect(() => {
         const airportdata = async () => {
@@ -64,6 +64,17 @@ export default function Airport() {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <div className='mt-10 flex justify-center box-border'>
+                <a href="/insertairport"><button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2">
+                    Insert Airport
+                </button></a>
+                <a href="/deleteairport"><button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2">
+                    Delete Airport
+                </button></a>
+                <a href="/updateairport"><button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2">
+                    Update Airport
+                </button></a>
+            </div>
         </div>
     );
 }
