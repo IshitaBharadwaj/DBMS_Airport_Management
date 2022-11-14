@@ -20,7 +20,7 @@ export default function Airport() {
                     `http://localhost:3001/airport`
                 );
                 setairporttable(response.data);
-                console.log(response.data);
+                // console.log(response.data);
             } catch (e) {
                 console.log(e);
             }

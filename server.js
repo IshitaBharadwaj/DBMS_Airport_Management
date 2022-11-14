@@ -29,6 +29,9 @@ app.use('/airport',airportRouter);
 const airlineRouter = require('./routes/airline');
 app.use('/airline',airlineRouter);
 
+const queriesRouter = require('./routes/queries');
+app.use('/queries',queriesRouter);
+
 app.listen(PORT, () => {
-    console.log(`Listening for requests on port ${PORT}`)
+    console.log(`Listening for requests on port ${PORT}`) 
 })
