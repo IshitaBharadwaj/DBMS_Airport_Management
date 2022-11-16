@@ -32,7 +32,7 @@ const InsertAirport = ({ toggleForm }) => {
         navigate('/airport');
     }
     return (
-        <div className="flex justify-center box-border">
+        <div className="flex flex-col items-center justify-center box-border">
             <form class="w-full max-w-lg mb-6" onSubmit={enterairport}>
                 <div class="flex flex-wrap -mx-3 mb-6"></div>
                 <div class="flex flex-wrap -mx-3 mb-2">
@@ -197,7 +197,7 @@ const InsertAirport = ({ toggleForm }) => {
                     Add an Airport
                 </button>
             </form>
-            <div className="max-w-lg mt-2 ml-32">
+            <div className="max-w-lg mt-4">
                 <a href="/airport"><button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2">
                     Go back
                 </button></a>

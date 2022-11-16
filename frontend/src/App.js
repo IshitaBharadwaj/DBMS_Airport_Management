@@ -8,6 +8,7 @@ import InsertAirport from './components/InsertAirport';
 import DeleteAirport from './components/DeleteAirport';
 import UpdateAirport from './components/UpdateAirport';
 import Query from './components/Query';
+import Test from './components/Test';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/deleteairport" element={<DeleteAirport/>} />
             <Route exact path="/updateairport" element={<UpdateAirport/>} />
             <Route exact path="/query" element={<Query/>} />
+            <Route exact path="/test" element={<Test/>} />
 
           </Routes>
       </BrowserRouter>
