@@ -23,15 +23,12 @@ Next up, create an .env-local file in your main project directory and specify th
 In the main project directory run the server by typing `npm run dev`. After this open another terminal and `cd` into the frontend directory and run `npm start` to start the website.
 
 ## ER Diagram 
+![Airport_Management_ER_final](https://user-images.githubusercontent.com/68071562/203804163-d4720e93-b427-44d5-8f66-d583c9c3e790.png)
 
 
 
 ## Relational Schema
-
-
-
-
-
+![Airport_Relational_Schema_final](https://user-images.githubusercontent.com/68071562/203804255-72606c99-a340-4728-b767-cf3d1223e986.png)
 
 
 
