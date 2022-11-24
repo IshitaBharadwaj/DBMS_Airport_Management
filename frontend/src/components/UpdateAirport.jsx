@@ -34,7 +34,7 @@ const UpdateAirport = ({ toggleForm }) => {
         navigate('/airport');
     }
     return (
-        <div className="flex justify-center box-border">
+        <div className="flex flex-col items-center justify-center box-border">
             {/* <div class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Choice:
                 <ol>
@@ -101,7 +101,8 @@ const UpdateAirport = ({ toggleForm }) => {
                     Update an Airport
                 </button>
             </form>
-            <div className="max-w-lg mt-2 ml-32">
+            
+            <div className="max-w-lg mt-4">
                 <a href="/airport"><button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2">
                     Go back
                 </button></a>
